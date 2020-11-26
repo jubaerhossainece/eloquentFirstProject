@@ -1,0 +1,66 @@
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%; 
+   z-index: 9999; 
+   background-color: #FFF;
+   overflow: hidden;
+}
+
+.preloader .spinner-border{
+	height: 3rem;
+	width: 3rem;
+	position: fixed;
+    top: calc(50% - 1.5rem);
+    left: calc(50% - 1.5rem);
+    border-width: 0.35rem;
+}
+
+.card {
+	border: 0px;
+}
+
+.btn{
+	border-radius: 3px;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-bottom: 0;
+}
+
+.card-title{
+	margin-bottom: 0;
+}
+
+.form-group:last-child{
+	margin-bottom: 0;
+}
+
+
+/*select 2 plugin custom css*/
+.select2-container{
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+  padding: 3px 5px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+  border: 1px solid blue !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+  font-size: 15px;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field:focus{
+  border: 0 !important;
+}
+
+.select2-container .select2-selection--multiple{
+  min-height: 36px;
+}

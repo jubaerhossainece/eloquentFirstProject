@@ -1,0 +1,18 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+$fa-font-path: "../webfonts";
+//fontawesome file
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+// Bootstrap
+// @import "~bootstrap/scss/bootstrap";
+
+// Variables
+@import "variables";
+
+//Custom CSS
+@import "custom";
+
+//Tooltip scss file
+@import "tooltip";

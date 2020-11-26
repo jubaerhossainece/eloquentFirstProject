@@ -1,0 +1,26 @@
+*:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+*:active{
+	background-color: none;
+}
+
+textarea:focus,input:focus{
+    border: 1px solid blue !important;
+}
+
+.alert{
+	padding: 0.5rem 0.75rem;
+	margin-top: 10px !important;
+}
+
+.row {
+    justify-content: center;
+    display: flex;
+ }
+
+ .show-card label{
+ 	font-weight: 600;
+ }
