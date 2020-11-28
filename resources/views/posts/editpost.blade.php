@@ -9,9 +9,9 @@
 			<div class="main-card mb-3 card">
 				<div class="card-header"><h5 class="card-title">Edit Post</h5></div>
 			     <div class="card-body">
-			         <form action="/posts" method="POST">
+			         <form action="/posts/{{$post->id}}" method="POST">
 						@csrf
-
+						@method('PUT')
 						  <div class="form-group">
 						    <label for="title">Post Title </label>
 						    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Enter Title" value="{{$post->title}}">
@@ -24,9 +24,9 @@
 						  <div class="form-group">
 						    <label for="tags">Select Tags</label>
 						    <br>
-							<select class="js-example-basic-multiple" name="tags[]" multiple="multiple">
-							  @foreach($tags as $tag)
-							   <option value="{{$tag->id}}">{{$tag->name}}</option>
+							<select id="editpost-multiselect" name="tags[]" selected="selected" multiple="multiple">
+							  @foreach($allTags as $tag)
+							   <option <?php if(!empty($tagId)){if(in_array($tag->id, $tagId)){ echo "selected"; } } ?> value="{{$tag->id}}">{{$tag->name}}</option>
 							  @endforeach				  
 							</select>
 

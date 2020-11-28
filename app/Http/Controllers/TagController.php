@@ -37,14 +37,15 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string|unique:tags, name'
+            'name' => 'required|string|unique:tags,name'
         ]);
 
         $tag = new Tag;
         $tag->name = $request->input('name');
         $tag->save();
 
-        return redirect('/tags')->with('success', 'Tag has been addedd successfully!');
+        return redirect()->back();
+        // return redirect('/tags')->with('success', 'Tag has been addedd successfully!');
     }
 
     /**

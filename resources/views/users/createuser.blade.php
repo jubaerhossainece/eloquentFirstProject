@@ -41,11 +41,6 @@
 						  </div>
 
 						  <input type="submit" name="submit" class="btn btn-primary" value="Create User">
-
-								 <!--  <div class="form-group">
-								    <label for="exampleFormControlTextarea1">Example textarea</label>
-								    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-								  </div> -->
 						</form>
 			        </div>
 			    </div>

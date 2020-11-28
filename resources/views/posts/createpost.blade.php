@@ -32,7 +32,7 @@
 						  <div class="form-group">
 						    <label for="tags">Select Tags</label>
 						    <br>
-							<select class="js-example-basic-multiple" name="tags[]" multiple="multiple">
+							<select id="createpost-multiselect" class="" name="tags[]" multiple="multiple">
 							  @foreach($tags as $tag)
 							   <option value="{{$tag->id}}">{{$tag->name}}</option>
 							  @endforeach				  

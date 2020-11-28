@@ -79,7 +79,17 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($post->id);
         $tags = $post->tags;
-        return view('posts.editpost', compact(['post', 'tags']));
+
+        foreach ($tags as $tag) {
+            $tagId[] = $tag->id;
+        }
+
+        if(count($tags) === 0){
+            $tagId = [];
+        }
+        $allTags = Tag::all();
+        
+        return view('posts.editpost', compact(['post', 'tagId', 'allTags']));
     }
 
     /**
@@ -94,9 +104,15 @@ class PostController extends Controller
         $this->validate($request, [
             'title' => 'required|string',
             'description' => 'required|string',
-            'tags.*' => 'required|string'
+            'tags.*' => 'sometimes|nullable|required|string'
         ]);
 
+        $post->title = $request->input('title');
+        $post->description = $request->input('description');
+        $post->update();
+        $post->tags()->sync($request->input('tags'));
+
+        return redirect('/posts')->with('success', 'post updated successfully');
     }
 
     /**

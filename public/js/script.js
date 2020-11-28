@@ -8,7 +8,11 @@ $(window).on("load", function() {
 });     
 
       // Select2 Multiple
-      $('.js-example-basic-multiple').select2({
+      $('#editpost-multiselect').select2({
+        placeholder: "Select tags",
+      });
+
+      $('#createpost-multiselect').select2({
         placeholder: "Select tags",
       });
 
