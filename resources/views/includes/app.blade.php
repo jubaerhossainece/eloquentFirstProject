@@ -13,7 +13,7 @@
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-        <title>Laravel</title>
+        <title>Branch 1 branch on github</title>
         <!-- ============================================
          * Ruang Admin template asset css files
         ============================================== -->
